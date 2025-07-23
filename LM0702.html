@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EWFYX4YZCS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EWFYX4YZCS');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="Lm0702.png" type="image/x-icon">
+  <title>Муниб</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --neon-blue: #00a8ff;
+      --dark-blue: #001a33;
+      --medium-blue: #0077b6;
+      --light-blue: #90e0ef;
+      --accent: #00bbff;
+      --text-dark: #e0f7ff;
+      --text-light: #ffffff;
+      --glow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+    }
+    
+    body {
+      font-family: 'Rajdhani', 'Orbitron', sans-serif;
+      color: var(--text-dark);
+      background-color: #000d1a;
+      overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      letter-spacing: 0.5px;
+    }
+    
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: linear-gradient(135deg, var(--dark-blue) 0%, #00072d 100%);
+      opacity: 0.9;
+    }
+    
+    .particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    
+    /* Add shining stars effect */
+    .stars {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    
+    .stars::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      background-image: 
+        radial-gradient(1px 1px at 20px 30px, var(--light-blue), rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 40px 70px, var(--light-blue), rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 80px 10px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 120px 50px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 160px 20px, var(--light-blue), rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 200px 80px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 240px 30px, var(--light-blue), rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 280px 60px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 320px 10px, var(--light-blue), rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 360px 70px, white, rgba(0,0,0,0));
+      background-size: 400px 400px;
+      animation: twinkle 8s infinite;
+    }
+    
+    .stars::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      background-image: 
+        radial-gradient(1px 1px at 30px 100px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 70px 40px, var(--light-blue), rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 110px 80px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 150px 30px, var(--light-blue), rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 190px 60px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 230px 90px, var(--light-blue), rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 270px 50px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 310px 20px, var(--light-blue), rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 350px 70px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 390px 40px, var(--light-blue), rgba(0,0,0,0));
+      background-size: 400px 400px;
+      animation: twinkle 12s infinite;
+    }
+    
+    @keyframes twinkle {
+      0% { opacity: 0.3; }
+      50% { opacity: 1; }
+      100% { opacity: 0.3; }
+    }
+    
+    header {
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+      position: relative;
+      overflow: hidden;
+      background: rgba(0, 20, 40, 0.7);
+      color: var(--neon-blue);
+      backdrop-filter: blur(5px);
+      border-bottom: 1px solid var(--neon-blue);
+      box-shadow: var(--glow);
+    }
+    
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 10px var(--neon-blue);
+      letter-spacing: 2px;
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue);
+      }
+      to {
+        text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--light-blue), 0 0 30px var(--medium-blue);
+      }
+    }
+    
+    .subtitle {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      font-weight: 500;
+      text-shadow: 0 0 5px var(--light-blue);
+      letter-spacing: 1px;
+    }
+    
+    .profile-container {
+      margin: -70px auto 1.5rem;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 3px solid var(--neon-blue);
+      box-shadow: 0 0 15px var(--neon-blue);
+      background-color: #001f3f;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .profile-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    main {
+      flex: 1;
+      padding: 2rem 1rem;
+      max-width: 800px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    
+    .section {
+      background: rgba(0, 30, 60, 0.7);
+      border-radius: 15px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 15px rgba(0, 187, 255, 0.2);
+      backdrop-filter: blur(5px);
+      border: 1px solid var(--neon-blue);
+    }
+    
+    h2 {
+      color: var(--neon-blue);
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+      position: relative;
+      display: inline-block;
+      font-family: 'Orbitron', sans-serif;
+      text-shadow: 0 0 5px var(--light-blue);
+    }
+    
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 3px;
+      box-shadow: 0 0 5px var(--light-blue);
+    }
+    
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    
+    .social-card {
+      background: rgba(0, 20, 40, 0.6);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px rgba(0, 187, 255, 0.1);
+      border: 1px solid var(--medium-blue);
+      cursor: pointer;
+    }
+    
+    .social-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px var(--neon-blue);
+      border-color: var(--neon-blue);
+    }
+    
+    .social-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--neon-blue);
+      text-shadow: 0 0 5px var(--light-blue);
+    }
+    
+    .social-name {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--light-blue);
+    }
+    
+    .crypto-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      padding: 1.5rem;
+      background: rgba(0, 20, 40, 0.6);
+      border-radius: 12px;
+      border: 1px solid var(--medium-blue);
+    }
+    
+    .crypto-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .crypto-icon {
+      font-size: 1.5rem;
+      color: var(--neon-blue);
+    }
+    
+    .crypto-label {
+      font-weight: 600;
+      color: var(--light-blue);
+      min-width: 120px;
+    }
+    
+    .crypto-value {
+      font-family: monospace;
+      color: var(--accent);
+      word-break: break-all;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: rgba(0, 20, 40, 0.9);
+      color: var(--neon-blue);
+      backdrop-filter: blur(5px);
+      border-top: 1px solid var(--neon-blue);
+      box-shadow: var(--glow);
+    }
+    
+    .copyright {
+      margin-bottom: 0.5rem;
+      font-family: 'Orbitron', sans-serif;
+    }
+    
+    .made-with {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      text-shadow: 0 0 3px var(--light-blue);
+    }
+    
+    /* Back to top button */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background: rgba(0, 20, 40, 0.8);
+      border: 1px solid var(--neon-blue);
+      border-radius: 50%;
+      color: var(--neon-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      cursor: pointer;
+      box-shadow: 0 0 10px var(--neon-blue);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 100;
+    }
+    
+    .back-to-top.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .back-to-top:hover {
+      background: var(--neon-blue);
+      color: var(--dark-blue);
+      box-shadow: 0 0 20px var(--neon-blue);
+    }
+
+    /* Contact Form Styles */
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .form-label {
+      font-weight: 600;
+      color: var(--light-blue);
+    }
+
+    .form-input, .form-textarea {
+      background: rgba(0, 20, 40, 0.6);
+      border: 1px solid var(--medium-blue);
+      border-radius: 8px;
+      padding: 0.8rem 1rem;
+      color: var(--text-dark);
+      font-family: inherit;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .form-input:focus, .form-textarea:focus {
+      outline: none;
+      border-color: var(--neon-blue);
+      box-shadow: 0 0 10px var(--neon-blue);
+    }
+
+    .form-textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      background: linear-gradient(135deg, var(--medium-blue) 0%, var(--neon-blue) 100%);
+      color: var(--dark-blue);
+      border: none;
+      border-radius: 8px;
+      padding: 1rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 15px var(--neon-blue);
+    }
+
+    /* Rating System */
+    .rating-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .rating-title {
+      font-weight: 600;
+      color: var(--light-blue);
+    }
+
+    .rating-stars {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .rating-star {
+      font-size: 2rem;
+      color: var(--medium-blue);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .rating-star:hover,
+    .rating-star.active {
+      color: var(--neon-blue);
+      text-shadow: 0 0 10px var(--neon-blue);
+      transform: scale(1.1);
+    }
+
+    .rating-value {
+      font-weight: 600;
+      color: var(--accent);
+      margin-top: 0.5rem;
+    }
+
+    /* Success Message */
+    .success-message {
+      display: none;
+      background: rgba(0, 187, 255, 0.2);
+      border: 1px solid var(--neon-blue);
+      border-radius: 8px;
+      padding: 1.5rem;
+      text-align: center;
+      margin-top: 1.5rem;
+      animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .success-message i {
+      font-size: 2.5rem;
+      color: var(--neon-blue);
+      margin-bottom: 1rem;
+    }
+
+    .success-message p {
+      font-size: 1.1rem;
+      color: var(--light-blue);
+    }
+    
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      
+      .subtitle {
+        font-size: 1rem;
+      }
+      
+      .section {
+        padding: 1.5rem;
+      }
+      
+      .social-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1rem;
+      }
+      
+      .social-card {
+        padding: 1rem;
+      }
+      
+      .social-icon {
+        font-size: 2rem;
+      }
+      
+      .back-to-top {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+        bottom: 20px;
+        right: 20px;
+      }
+
+      .rating-star {
+        font-size: 1.8rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      
+      .profile-container {
+        width: 120px;
+        height: 120px;
+        margin-top: -60px;
+      }
+      
+      .social-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      
+      .crypto-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+
+      .rating-star {
+        font-size: 1.5rem;
+      }
+    } 
+    .instagram-icon {
+  margin-left: 0.5rem;
+  color: var(--neon-blue);
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.instagram-icon:hover {
+  color: var(--light-blue);
+}
+  </style>
+</head>
+<body>
+  <div class="background">
+    <div class="stars"></div>
+    <div class="particles" id="particles-js"></div>
+  </div>
+  
+  <header>
+    <h1>Муниб</h1>
+    <p class="subtitle">LM0702</p>
+  </header>
+  
+  <div class="profile-container">
+    <img src="Profile.png" alt="Muneeb" class="profile-img">
+  </div>
+  
+  <main>
+    <section class="section">
+      <h2>Social Media</h2>
+      <div class="social-grid">
+        <a href="https://www.tiktok.com/@lm0702_" target="_blank" class="social-card">
+          <div class="social-icon">
+            <i class="fab fa-tiktok"></i>
+          </div>
+          <div class="social-name">TikTok</div>
+        </a>
+        
+        <a href="https://www.instagram.com/lm0702_/" target="_blank" class="social-card">
+          <div class="social-icon">
+            <i class="fab fa-instagram"></i>
+          </div>
+          <div class="social-name">Instagram</div>
+        </a>
+        
+        <a href="https://youtube.com/@lm0702-xtracc?si=lEloGuQ46Gjh7mkF" target="_blank" class="social-card">
+          <div class="social-icon">
+            <i class="fab fa-youtube"></i>
+          </div>
+          <div class="social-name">YouTube</div>
+        </a>
+        
+        <a href="https://x.com/lm0702_?t=4GR4_6pJlyJV6LWGg0EvQg&s=09" target="_blank" class="social-card">
+          <div class="social-icon">
+            <i class="fab fa-twitter"></i>
+          </div>
+          <div class="social-name">Twitter</div>
+        </a>
+        
+        <a href="https://discord.gg/UHrwEtwH" target="_blank" class="social-card">
+          <div class="social-icon">
+            <i class="fab fa-discord"></i>
+          </div>
+          <div class="social-name">Discord</div>
+        </a>
+      </div>
+    </section>
+    
+    <!-- 3D Interactive Card Themes Section -->
+    <section class="section">
+      <h2>3D Interactive Card Themes</h2>
+      <div class="social-grid">
+        <a href="Themes.html" target="_blank" class="social-card">
+          <div class="social-icon">
+            <i class="fas fa-cube"></i>
+          </div>
+          <div class="social-name">View Themes</div>
+        </a>
+      </div>
+    </section>
+    
+    <section class="section">
+      <h2>TikTok Fan Pages</h2>
+      <div class="social-grid">
+        <a href="https://www.tiktok.com/@cutekfam" target="_blank" class="social-card">
+          <div class="social-icon">
+            <i class="fab fa-tiktok"></i>
+          </div>
+          <div class="social-name">@cutekfam</div>
+        </a>
+        
+        <a href="https://www.tiktok.com/@cutekfam2.0" target="_blank" class="social-card">
+          <div class="social-icon">
+            <i class="fab fa-tiktok"></i>
+          </div>
+          <div class="social-name">@cutekfam2.0</div>
+        </a>
+        
+        <a href="https://www.tiktok.com/@muneebxzfam" target="_blank" class="social-card">
+          <div class="social-icon">
+            <i class="fab fa-tiktok"></i>
+          </div>
+          <div class="social-name">@muneebxzfam</div>
+        </a>
+        
+        <a href="https://www.tiktok.com/@elitezfam" target="_blank" class="social-card">
+          <div class="social-icon">
+            <i class="fab fa-tiktok"></i>
+          </div>
+          <div class="social-name">@elitezfam</div>
+        </a>
+      </div>
+    </section>
+    
+    <section class="section">
+      <h2>Web Fan Pages</h2>
+      <div class="social-grid">
+        <a href="https://muneebxzfam.github.io/Z-Fam-/" target="_blank" class="social-card">
+          <div class="social-icon">
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="social-name">Z-Fam</div>
+        </a>
+        
+        <a href="https://cutekfam.github.io/Cute-K-Fam-/" target="_blank" class="social-card">
+          <div class="social-icon">
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="social-name">Cute-K-Fam</div>
+        </a>
+      </div>
+    </section>
+    
+    <section class="section">
+      <h2>Crypto</h2>
+      <div class="crypto-info">
+        <div class="crypto-item">
+          <i class="fab fa-btc crypto-icon"></i>
+          <span class="crypto-label">Binance UID:</span>
+          <span class="crypto-value">177149706</span>
+        </div>
+        <div class="crypto-item">
+          <i class="fab fa-ethereum crypto-icon"></i>
+          <span class="crypto-label">Ethereum:</span>
+          <span class="crypto-value">0xcf61FfEF036D57520d9e05EB64114D7824177dC8</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="section">
+      <h2>Contact Me</h2>
+      <form id="contactForm" class="contact-form">
+        <div class="form-group">
+          <label for="name" class="form-label">Your Name</label>
+          <input type="text" id="name" name="name" class="form-input" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email" class="form-label">Your Email</label>
+          <input type="email" id="email" name="email" class="form-input" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="message" class="form-label">Your Message</label>
+          <textarea id="message" name="message" class="form-textarea" required></textarea>
+        </div>
+
+        <div class="rating-container">
+          <div class="rating-title">Rate Me (Optional)</div>
+          <div class="rating-stars">
+            <i class="fas fa-star rating-star" data-value="1"></i>
+            <i class="fas fa-star rating-star" data-value="2"></i>
+            <i class="fas fa-star rating-star" data-value="3"></i>
+            <i class="fas fa-star rating-star" data-value="4"></i>
+            <i class="fas fa-star rating-star" data-value="5"></i>
+          </div>
+          <input type="hidden" id="rating" name="rating" value="0">
+          <div class="rating-value" id="ratingValue">No rating selected</div>
+        </div>
+        
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+
+      <div id="successMessage" class="success-message">
+        <i class="fas fa-check-circle"></i>
+        <p>Thank you for your message! I'll get back to you soon.</p>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <div class="copyright">© 2025 Муниб. All Rights Reserved.</div>
+    <div class="made-with">
+  Official Page
+  <a href="https://www.instagram.com/lm0702_" target="_blank" class="instagram-icon" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+</div>
+  </footer>
+
+  <!-- Back to top button -->
+  <div class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <!-- Particles.js for animated background -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <!-- EmailJS for sending emails -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    // Initialize particles.js with blue theme
+    document.addEventListener('DOMContentLoaded', function() {
+      particlesJS('particles-js', {
+        "particles": {
+          "number": {
+            "value": 60,
+            "density": {
+              "enable": true,
+              "value_area": 800
+            }
+          },
+          "color": {
+            "value": "#00a8ff"
+          },
+          "shape": {
+            "type": "circle",
+            "stroke": {
+              "width": 0,
+              "color": "#000000"
+            },
+            "polygon": {
+              "nb_sides": 5
+            }
+          },
+          "opacity": {
+            "value": 0.5,
+            "random": false,
+            "anim": {
+              "enable": false,
+              "speed": 1,
+              "opacity_min": 0.1,
+              "sync": false
+            }
+          },
+          "size": {
+            "value": 3,
+            "random": true,
+            "anim": {
+              "enable": false,
+              "speed": 40,
+              "size_min": 0.1,
+              "sync": false
+            }
+          },
+          "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#00a8ff",
+            "opacity": 0.3,
+            "width": 1
+          },
+          "move": {
+            "enable": true,
+            "speed": 2,
+            "direction": "none",
+            "random": false,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+              "enable": false,
+              "rotateX": 600,
+              "rotateY": 1200
+            }
+          }
+        },
+        "interactivity": {
+          "detect_on": "canvas",
+          "events": {
+            "onhover": {
+              "enable": true,
+              "mode": "grab"
+            },
+            "onclick": {
+              "enable": true,
+              "mode": "push"
+            },
+            "resize": true
+          },
+          "modes": {
+            "grab": {
+              "distance": 140,
+              "line_linked": {
+                "opacity": 1
+              }
+            },
+            "push": {
+              "particles_nb": 4
+            }
+          }
+        },
+        "retina_detect": true
+      });
+
+      // Back to top button functionality
+      const backToTopButton = document.getElementById('backToTop');
+      
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+          backToTopButton.classList.add('active');
+        } else {
+          backToTopButton.classList.remove('active');
+        }
+      });
+      
+      backToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+
+      // Rating system functionality
+      const stars = document.querySelectorAll('.rating-star');
+      const ratingInput = document.getElementById('rating');
+      const ratingValue = document.getElementById('ratingValue');
+
+      stars.forEach(star => {
+        star.addEventListener('click', function() {
+          const value = parseInt(this.getAttribute('data-value'));
+          ratingInput.value = value;
+          
+          // Update star display
+          stars.forEach((s, index) => {
+            if (index < value) {
+              s.classList.add('active');
+            } else {
+              s.classList.remove('active');
+            }
+          });
+          
+          // Update rating text
+          ratingValue.textContent = `You rated: ${value} star${value !== 1 ? 's' : ''}`;
+        });
+
+        // Hover effect
+        star.addEventListener('mouseover', function() {
+          const value = parseInt(this.getAttribute('data-value'));
+          stars.forEach((s, index) => {
+            if (index < value) {
+              s.style.color = '#00a8ff';
+              s.style.textShadow = '0 0 10px #00a8ff';
+            }
+          });
+        });
+
+        star.addEventListener('mouseout', function() {
+          const currentRating = parseInt(ratingInput.value);
+          stars.forEach((s, index) => {
+            if (index >= currentRating) {
+              s.style.color = '#0077b6';
+              s.style.textShadow = 'none';
+            }
+          });
+        });
+      });
+
+      // Initialize EmailJS
+      emailjs.init('Z1ra9H38Wjw3ZADCg'); // You need to replace this with your actual EmailJS user ID
+
+      // Contact form submission
+      const contactForm = document.getElementById('contactForm');
+      const successMessage = document.getElementById('successMessage');
+
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form values
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        const rating = document.getElementById('rating').value;
+
+        // Send email using EmailJS
+        emailjs.send('service_n1oydnm', 'template_gfky5mk', {
+          from_name: name,
+          from_email: email,
+          message: message,
+          rating: rating
+        })
+        .then(function(response) {
+          console.log('SUCCESS!', response.status, response.text);
+          // Show success message
+          contactForm.style.display = 'none';
+          successMessage.style.display = 'block';
+          
+          // Reset form
+          contactForm.reset();
+          stars.forEach(star => star.classList.remove('active'));
+          ratingInput.value = '0';
+          ratingValue.textContent = 'No rating selected';
+          
+          // Hide success message after 5 seconds and show form again
+          setTimeout(() => {
+            successMessage.style.display = 'none';
+            contactForm.style.display = 'flex';
+          }, 5000);
+        }, function(error) {
+          console.log('FAILED...', error);
+          alert('Failed to send message. Please try again later.');
+        });
+      });
+    });
+  </script>
+</body>
+</html>
