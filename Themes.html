@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LM0702 Themes</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --neon-blue: #00a8ff;
+      --dark-blue: #001a33;
+      --medium-blue: #0077b6;
+      --light-blue: #90e0ef;
+      --accent: #00bbff;
+      --text-dark: #e0f7ff;
+      --text-light: #ffffff;
+      --glow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+    }
+    
+    /* Focus outline removal */
+    *:focus {
+      outline: none !important;
+      box-shadow: none !important;
+    }
+    
+    /* Firefox specific */
+    button::-moz-focus-inner,
+    input::-moz-focus-inner {
+      border: 0;
+      padding: 0;
+    }
+    
+    /* WebKit browsers */
+    input,
+    textarea,
+    button,
+    select,
+    a {
+      -webkit-tap-highlight-color: transparent;
+      -webkit-focus-ring-color: transparent;
+    }
+    
+    body {
+      font-family: 'Rajdhani', 'Orbitron', sans-serif;
+      color: var(--text-dark);
+      background-color: #000d1a;
+      overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      letter-spacing: 0.5px;
+    }
+    
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: linear-gradient(135deg, var(--dark-blue) 0%, #00072d 100%);
+      opacity: 0.9;
+    }
+    
+    .particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .stars {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    
+    .stars::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      background-image: 
+        radial-gradient(1px 1px at 20px 30px, var(--light-blue), rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 40px 70px, var(--light-blue), rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 80px 10px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 120px 50px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 160px 20px, var(--light-blue), rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 200px 80px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 240px 30px, var(--light-blue), rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 280px 60px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 320px 10px, var(--light-blue), rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 360px 70px, white, rgba(0,0,0,0));
+      background-size: 400px 400px;
+      animation: twinkle 8s infinite;
+    }
+    
+    .stars::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      background-image: 
+        radial-gradient(1px 1px at 30px 100px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 70px 40px, var(--light-blue), rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 110px 80px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 150px 30px, var(--light-blue), rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 190px 60px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 230px 90px, var(--light-blue), rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 270px 50px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 310px 20px, var(--light-blue), rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 350px 70px, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 390px 40px, var(--light-blue), rgba(0,0,0,0));
+      background-size: 400px 400px;
+      animation: twinkle 12s infinite;
+    }
+    
+    @keyframes twinkle {
+      0% { opacity: 0.3; }
+      50% { opacity: 1; }
+      100% { opacity: 0.3; }
+    }
+    
+    header {
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+      position: relative;
+      overflow: hidden;
+      background: rgba(0, 20, 40, 0.7);
+      color: var(--neon-blue);
+      backdrop-filter: blur(5px);
+      border-bottom: 1px solid var(--neon-blue);
+      box-shadow: var(--glow);
+    }
+    
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 10px var(--neon-blue);
+      letter-spacing: 2px;
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue);
+      }
+      to {
+        text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--light-blue), 0 0 30px var(--medium-blue);
+      }
+    }
+    
+    .subtitle {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      font-weight: 500;
+      text-shadow: 0 0 5px var(--light-blue);
+      letter-spacing: 1px;
+    }
+    
+    main {
+      flex: 1;
+      padding: 2rem 1rem;
+      max-width: 800px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    
+    .section {
+      background: rgba(0, 30, 60, 0.7);
+      border-radius: 15px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 15px rgba(0, 187, 255, 0.2);
+      backdrop-filter: blur(5px);
+      border: 1px solid var(--neon-blue);
+    }
+    
+    h2 {
+      color: var(--neon-blue);
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+      position: relative;
+      display: inline-block;
+      font-family: 'Orbitron', sans-serif;
+      text-shadow: 0 0 5px var(--light-blue);
+    }
+    
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 3px;
+      box-shadow: 0 0 5px var(--light-blue);
+    }
+    
+    .theme-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    
+    .theme-card {
+      background: rgba(0, 20, 40, 0.6);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px rgba(0, 187, 255, 0.1);
+      border: 1px solid var(--medium-blue);
+      cursor: pointer;
+    }
+    
+    .theme-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px var(--neon-blue);
+      border-color: var(--neon-blue);
+    }
+    
+    .theme-name {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--light-blue);
+      font-size: 1.2rem;
+    }
+    
+    .theme-price {
+      font-weight: 700;
+      color: var(--accent);
+      font-size: 1.3rem;
+    }
+    
+    .bundle {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      background: rgba(0, 20, 40, 0.6);
+      border-radius: 12px;
+      border: 2px dashed var(--neon-blue);
+      text-align: center;
+    }
+    
+    .bundle h3 {
+      color: var(--neon-blue);
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-family: 'Orbitron', sans-serif;
+    }
+    
+    .bundle p {
+      color: var(--light-blue);
+      margin-bottom: 1.5rem;
+    }
+    
+    .bundle-btn {
+      background: linear-gradient(135deg, var(--medium-blue) 0%, var(--neon-blue) 100%);
+      color: var(--dark-blue);
+      border: none;
+      border-radius: 8px;
+      padding: 0.8rem 1.5rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-family: 'Orbitron', sans-serif;
+      display: inline-block;
+    }
+    
+    .bundle-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 15px var(--neon-blue);
+    }
+    
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: rgba(0, 20, 40, 0.9);
+      color: var(--neon-blue);
+      backdrop-filter: blur(5px);
+      border-top: 1px solid var(--neon-blue);
+      box-shadow: var(--glow);
+    }
+    
+    .copyright {
+      margin-bottom: 0.5rem;
+      font-family: 'Orbitron', sans-serif;
+    }
+    
+    .made-with {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      text-shadow: 0 0 3px var(--light-blue);
+    }
+    
+    /* Back to top button */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background: rgba(0, 20, 40, 0.8);
+      border: 1px solid var(--neon-blue);
+      border-radius: 50%;
+      color: var(--neon-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      cursor: pointer;
+      box-shadow: 0 0 10px var(--neon-blue);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 100;
+    }
+    
+    .back-to-top.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .back-to-top:hover {
+      background: var(--neon-blue);
+      color: var(--dark-blue);
+      box-shadow: 0 0 20px var(--neon-blue);
+    }
+    
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      
+      .subtitle {
+        font-size: 1rem;
+      }
+      
+      .section {
+        padding: 1.5rem;
+      }
+      
+      .theme-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .back-to-top {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+        bottom: 20px;
+        right: 20px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+    
+    /* Focus outline removal for mouse users */
+    .using-mouse *:focus {
+      outline: none !important;
+      box-shadow: none !important;
+    }
+    .instagram-icon {
+  margin-left: 0.5rem;
+  color: var(--neon-blue);
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.instagram-icon:hover {
+  color: var(--light-blue);
+}
+  </style>
+</head>
+<body>
+  <div class="background">
+    <div class="stars"></div>
+    <div class="particles" id="particles-js"></div>
+  </div>
+  
+  <header>
+    <h1>LM0702 THEMES</h1>
+    <p class="subtitle">3D Interactive Card Templates</p>
+  </header>
+  
+  <main>
+    <section class="section">
+      <h2>Template Themes</h2>
+      <div class="theme-grid">
+        <a href="https://lm0702.gumroad.com/l/zgjljf" target="_blank" class="theme-card">
+          <div class="theme-name">Emerlux Theme</div>
+          <div class="theme-price">$20</div>
+        </a>
+        
+        <a href="https://lm0702.gumroad.com/l/pvppgk" target="_blank" class="theme-card">
+          <div class="theme-name">RoyalFrame Theme</div>
+          <div class="theme-price">$20</div>
+        </a>
+        
+        <a href="https://lm0702.gumroad.com/l/zdqij" target="_blank" class="theme-card">
+          <div class="theme-name">Luminex Theme</div>
+          <div class="theme-price">$20</div>
+        </a>
+        
+        <a href="https://lm0702.gumroad.com/l/rpmmw" target="_blank" class="theme-card">
+          <div class="theme-name">Royal Pulse Theme</div>
+          <div class="theme-price">$20</div>
+        </a>
+        
+        <a href="https://lm0702.gumroad.com/l/glfvb" target="_blank" class="theme-card">
+          <div class="theme-name">PinkVanta Theme</div>
+          <div class="theme-price">$20</div>
+        </a>
+        
+        <a href="https://lm0702.gumroad.com/l/hvcpqu" target="_blank" class="theme-card">
+          <div class="theme-name">Midnight Theme</div>
+          <div class="theme-price">$20</div>
+        </a>
+      </div>
+      
+      <div class="bundle">
+        <h3>All Themes Bundle</h3>
+        <p>Save big with the full bundle and elevate your designs instantly</p>
+        <a href="https://lm0702.gumroad.com/l/ruyols" target="_blank" class="bundle-btn">Get All for $50</a>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <div class="copyright">© 2025 LM0702. All Rights Reserved.</div>
+    <div class="made-with">
+  Official Page
+  <a href="https://www.instagram.com/lm0702_" target="_blank" class="instagram-icon" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+</div>
+  </footer>
+
+  <!-- Back to top button -->
+  <div class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <!-- Particles.js for animated background -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    // Initialize particles.js with blue theme
+    document.addEventListener('DOMContentLoaded', function() {
+      particlesJS('particles-js', {
+        "particles": {
+          "number": {
+            "value": 60,
+            "density": {
+              "enable": true,
+              "value_area": 800
+            }
+          },
+          "color": {
+            "value": "#00a8ff"
+          },
+          "shape": {
+            "type": "circle",
+            "stroke": {
+              "width": 0,
+              "color": "#000000"
+            },
+            "polygon": {
+              "nb_sides": 5
+            }
+          },
+          "opacity": {
+            "value": 0.5,
+            "random": false,
+            "anim": {
+              "enable": false,
+              "speed": 1,
+              "opacity_min": 0.1,
+              "sync": false
+            }
+          },
+          "size": {
+            "value": 3,
+            "random": true,
+            "anim": {
+              "enable": false,
+              "speed": 40,
+              "size_min": 0.1,
+              "sync": false
+            }
+          },
+          "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#00a8ff",
+            "opacity": 0.3,
+            "width": 1
+          },
+          "move": {
+            "enable": true,
+            "speed": 2,
+            "direction": "none",
+            "random": false,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+              "enable": false,
+              "rotateX": 600,
+              "rotateY": 1200
+            }
+          }
+        },
+        "interactivity": {
+          "detect_on": "canvas",
+          "events": {
+            "onhover": {
+              "enable": true,
+              "mode": "grab"
+            },
+            "onclick": {
+              "enable": true,
+              "mode": "push"
+            },
+            "resize": true
+          },
+          "modes": {
+            "grab": {
+              "distance": 140,
+              "line_linked": {
+                "opacity": 1
+              }
+            },
+            "push": {
+              "particles_nb": 4
+            }
+          }
+        },
+        "retina_detect": true
+      });
+
+      // Back to top button functionality
+      const backToTopButton = document.getElementById('backToTop');
+      
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+          backToTopButton.classList.add('active');
+        } else {
+          backToTopButton.classList.remove('active');
+        }
+      });
+      
+      backToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+
+      // Detect input method to handle focus outlines
+      document.addEventListener('mousedown', function() {
+        document.body.classList.add('using-mouse');
+      });
+      
+      document.addEventListener('keydown', function() {
+        document.body.classList.remove('using-mouse');
+      });
+    });
+  </script>
+</body>
+</html>
